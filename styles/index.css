@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ----------------- */
+/* CUSTOM PROPERTIES */
+/* ----------------- */
+:root {
+    /* container-max-width */
+    --card-max-width-mobile: 300px;
+    --card-max-width-desktop: 360px;
+
+
+    /* primary color */
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+
+    /* neutral color */
+    --clr-very-dark-blue: #4c4e61;
+    --clr-grayish-blue: hsl(229, 6%, 66%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+
+    /* spacings */
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 14px;
+    --spacing-200: 16px;
+    --spacing-250: 24px;
+    --spacing-300: 32px;
+    --spacing-400: 40px;
+    --spacing-900: 124px;
+
+    /* border radius */
+    --border-radius: 10px;
+
+    /* font-sizes */
+    --fs-100: 12px;
+    --fs-200: 14px;
+    --fs-300: 16px;
+    --fs-400: 20px;
+    --fs-500: 24px;
+    --fs-600: 32px;
+    --fs-700: 36px;
+
+    /* font-family */
+    --ff-base: "Poppins", sans;
+}
+
+/* ------------------*/
+/*  SEMANTIC PRESETS */
+/* ----------------- */
+
+body {
+    background-color: var(--clr-very-light-gray);
+    font-size: var(--fs-300);
+    font-family: var(--ff-base);
+    color: var(--clr-grayish-blue);
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--spacing-400) var(--spacing-200);
+
+
+}
+
+h1 {
+    color: var(--clr-very-dark-blue);
+    font-size: var(--fs-500);
+    font-weight: 300;
+    line-height: 120%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    span {
+        display: block;
+        color: var(--clr-very-dark-blue);
+        font-weight: 700;
+    }
+}
+
+p:not(.card__description) {
+    max-width: 50ch;
+    text-align: center;
+}
+
+
+/* ------------------------- */
+/* PRODCUT PREVIEW COMPONENT */
+/* ------------------------- */
+
+.card-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-300);
+    margin-top: 2rem;
+}
+
+.card-container--center {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    border-top: 4px solid var(--clr-very-dark-blue);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 16px rgba(76, 78, 97, .2);
+    padding: var(--spacing-300);
+    max-width: var(--card-max-width-mobile);
+    width: 100%;
+
+    &.card--cyan {
+        border-color: var(--clr-cyan);
+    }
+
+    &.card--red {
+        border-color: var(--clr-red);
+    }
+
+    &.card--yellow {
+        border-color: var(--clr-yellow);
+    }
+
+    &.card--blue {
+        border-color: var(--clr-blue);
+    }
+
+    .card__title {
+        font-weight: 600;
+        font-size: var(--fs-400);
+        color: var(--clr-very-dark-blue);
+    }
+
+    .card__description {
+        min-height: 5rem;
+    }
+
+    .card__image {
+        align-self: flex-end;
+        /* font-weight: 600;
+        font-size: var(--fs-400); */
+    }
+}
+
+@media (480px < width < 1279px) {
+    main {
+        padding: var(--spacing-400);
+        min-height: 90vh;
+
+        h1 {
+            max-width: 45ch;
+            font-size: var(--fs-600)
+        }
+
+    }
+
+
+
+    .card-container--center {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+}
+
+@media (width >=1280px) {
+    .card {
+        max-width: var(--card-max-width-desktop);
+    }
+
+}
+
+/* ----------------- */
+/* ATTRIBUTION */
+/* ----------------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 4rem;
+    ;
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    color: var(--clr-very-dark-blue);
+
+    a {
+        color: var(--clr-very-dark-blue);
+        font-weight: 600;
+    }
+}
