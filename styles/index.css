@@ -180,6 +180,10 @@ p:not(.card__description) {
         max-width: var(--card-max-width-desktop);
     }
 
+    h1 {
+        font-size: var(--fs-700)
+    }
+
 }
 
 /* ----------------- */
