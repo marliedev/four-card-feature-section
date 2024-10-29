@@ -1,12 +1,12 @@
-# Frontend Mentor - Product Card Component
+# Frontend Mentor - Four Card Feature Section
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./images/screenshot.png)
 
 ### Links
 
--   Live Site URL: [Live URL](https://marliedev.github.io/product-preview-card/)
+-   Live Site URL: [Live URL](https://marliedev.github.io/four-card-feature-section/)
 
 ### Built with
 
